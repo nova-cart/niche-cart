@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Logo.jpg">
+    <meta name="description" content="შოპინგ საიტი, სადაც შეგიძლიათ იპოვოთ საუკეთესო პროდუქტები, როგორიცაა მობილური ტელეფონები, სარეცხი მანქანები, ელექტრო გიტარები და სხვა. სწრაფი და უსაფრთხო შესყიდვები!">
+    <meta name="keywords" content="შოპინგი, ონლაინ მაღაზია, მობილური ტელეფონები, ელექტრო გიტარები, სარეცხი მანქანები, პროდუქცია">
+    <title>NOVA CART</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ნავიგაცია -->
+    <nav>
+        <a class="fbtn" href="mailto:novacartofficial69@gmail.com" target="_blank">Contact Us</a>
+        <a class="fbtn" href="https://www.instagram.com/nova_cart_ge/profilecard/?igsh=MTFpMGc5a3dzZWE0ZA==" target="_blank">Instagram</a>
+        <a class="fbtn" href="https://www.tiktok.com/@novacart_ge?_t=8sOvSbpi9LT&_r=1" target="_blank">TikTok</a>
+    </nav>
+
+    <!-- გვერდის სათაური -->
+    <header>
+        <h1>NOVA CART</h1>
+        <p class="pm1">კეთილი იყოს თქვენი მობრძანება "NOVA CART"-ზე — თანამედროვე შოპინგის ახალი სტანდარტი! აღმოაჩინეთ მრავალფეროვანი პროდუქცია, ისარგებლეთ მარტივი და კომფორტული სისტემით და განიცადეთ მომსახურების უმაღლესი ხარისხი, შექმნილი სწორედ თქვენი საჭიროებებისთვის.</p>
+        
+        <!-- ძებნის და ფილტრის სისტემები -->
+        <div class="search-filter">
+            <input type="text" placeholder="ძებნა პროდუქტებისთვის..." id="searchInput" oninput="autoSearchProducts()">
+            <select id="categories" onchange="filterProducts()">
+                <option value="all">ყველა</option>
+                <option value="ელექტრონიკა">ელექტრონიკა</option>
+                <option value="სანტექნიკა">სანტექნიკა</option>
+                <option value="მუსიკალური">მუსიკალური</option>
+                <!-- დაამატეთ მეტი კატეგორია, საჭიროებისამებრ -->
+            </select>
+            <select id="sortOrder" onchange="sortProducts(this.value)">
+                <option value="price-asc">ფასის ზრდადობით</option>
+                <option value="price-desc">ფასის კლებადობით</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- სლაიდერი -->
+    <iframe class="sif" src="https://imageslidergenerator.shahmirfaisal.com/slider?image=https%3A%2F%2Fi.ibb.co%2FjfyHHp0%2F1000020772.jpg&image=https%3A%2F%2Fi.ibb.co%2F272SDh2%2F1000020771.jpg&image=https%3A%2F%2Fi.ibb.co%2FzxXBtZK%2F1000020799.jpg&animationType=slide&autoPlay=true&radioButtonType=none&radioButtonSize=20&radioButtonGap=10&arrowsType=none&arrowsBackground=hidden&arrowsBackgroundVisibility=212&arrowsSize=46&arrowsOffset=1&arrowsColor=%23fff" style="border: none; width:100%;"></iframe>
+
+    <!-- პროდუქტის ბარათები -->
+    <div id="productsGrid">
+        <!-- პროდუქტის ბარათები დინამიურად შეიქმნება აქ -->
+    </div>
+
+    <!-- მოდალის ფანჯარა -->
+    <div id="productModal" style="display: none;">
+        <div class="modal-content">
+            <h2 id="modalProductName"></h2>
+            <p id="modalProductPrice"></p>
+            <p id="modalProductDescription"></p>
+            <p>მომწოდებლის ტელეფონი: <span id="modalSellerPhone"></span></p>
+            <button onclick="closeModal()">დახურვა</button>
+        </div>
+    </div>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK3D5ZXWCG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-FK3D5ZXWCG');
+    </script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

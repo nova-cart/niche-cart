@@ -1,0 +1,246 @@
+/* ძირითადი რეზეტის სტილი */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+    ;
+    font-family: myffont;
+}
+@font-face{
+  font-family: 'myffont';
+  src: url( 'bpg_banner_supersquare_caps.ttf')
+}
+/* საერთო სტილი */
+body {
+    font-family: myffont;
+    background-color: #1e1e2a;
+    color: #FFFFFF;
+    line-height: 1.6;
+    margin: 20px;
+    margin: auto;
+    overflow-x: hidden;
+}
+.contb{
+  min-width: auto;
+  height: auto;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 2px solid #ffd819;
+  background: #2b2a38;
+  border-radius: 5px;
+  font-size: 15px;
+  position: fixed;
+  margin-top: 5px;
+  margin-left: 5px;
+  border: #f6363f 3px initial;
+}
+a:link, a:visited {
+  text-align: center;
+  text-decoration: none;
+  color:  #f6363f;
+}
+.css-button-sharp--yellow:hover {
+  background: #fff;
+  color: #ffd819
+}
+header {
+    background-color: #f6363f;
+    padding: 10px 0;
+    text-align: center;
+    width:100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #1e1e2a;
+}
+
+#productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #2b2a38;
+    padding: 25px;
+    border: 2px solid #f6363f;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 25%;
+    height: auto;
+}
+
+.product-card img {
+    max-width: 10%;
+    height: auto;
+    border-radius: 10px;
+}
+.product-price {
+    color: #f6363f;
+    font-size: 15px;
+    margin-top: 0px;
+}
+h3{
+  font-size: 15px;
+}
+#searchInput {
+    width: 45%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1em;
+    background-color: #2b2a38;
+    color: #f6363f;
+}
+#categories {
+    width: 20%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1em;
+    background-color: #2b2a38;
+    color: #f6363f;
+}
+#sortOrder {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1em;
+    background-color: #2B2A38;
+    color: #f6363f;
+}
+
+#productModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000002B;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #1E1E2AC7;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    width: 80%;
+    max-width: 600px;
+    color: #FFF;
+    border: solid 2px  #f6363f;
+}
+
+.modal-content h2 {
+    margin: 0 0 10px;
+}
+
+.modal-content p {
+    margin: 5px 0;
+}
+
+.modal-content button {
+    background-color: #f6363f;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #f6363f;
+}
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.fbtn{
+  width: 25%;
+  padding: 10px;
+  font-size: 15px;
+  margin:10px;
+  background-color: #2B2A38;
+  border: none;
+  color: #f6363f;
+  border-radius: 2px;
+}
+.pm1{
+    width:100%;
+    height:auto;
+    font-size:15px;
+    text-aling:center;
+    color: #1e1e2a;
+    padding:20px;
+    margin-top:-10px;
+}
+iframe{
+  height: 80%;
+  border-radius:5px;
+  border: solid 2px  #f6363f;
+}
+.sif{
+    margin-top:30px;
+}
+@media only screen and (max-width: 600px) {
+  #sortOrder {
+    width: 91%;}
+    #categories {
+    width: 91%;}
+    #searchInput {
+    width: 91%;}
+    .product-card{
+      width: 85%;
+      height: 400px;
+      padding: 20px;
+      
+    }
+    h3{
+      font-size: 20px;
+    }
+    .product-price{
+      font-size: 20px;
+    }
+    .fbtn{
+        font-size: 13px;
+        padding:7px;
+    }
+    .sif{
+        margin-top:0px;
+    }
+}
