@@ -1,9 +1,11 @@
 const products = [
-    { id: 1, name: 'მობილური ტელეფონი', price: 299.99, description: 'კარგი ხარისხის კამერით მაღალი ხარისხის მობილური ტელეფონი.', category: 'ელექტრონიკა', image: 'https://shorturl.at/pQbVJ' },
     
-    { id: 2, name: 'სარეცხი მანქანა', price: 399.99, description: 'სრულად ავტომატური სარეცხი მანქანა მოწინავე ფუნქციებით.', category: 'სანტექნიკა', image: 'https://shorturl.at/L2BbQ', sellerPhone: '123-456-7891' },
+  //  { id: 1, name: 'მობილური ტელეფონი', 
+   //  price: 299.99, 
+   //  description: 'კარგი ხარისხის კამერით მაღალი ხარისხის მობილური ტელეფონი.', 
+   //  category: 'ელექტრონიკა', 
+   //  image: 'https://shorturl.at/pQbVJ' },
     
-    { id: 3, name: 'ელექტრული გიტარა', price: 499.99, description: 'პროფესიონალური ელექტრული გიტარა განსაკუთრებული ხმით.', category: 'მუსიკალური', image: 'https://shorturl.at/pQbVJ' },
 ];
 
 function renderProducts(productsList) {
