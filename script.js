@@ -4,7 +4,9 @@ const products = [
      price: 299.99, 
      description: 'კარგი ხარისხის კამერით მაღალი ხარისხის მობილური ტელეფონი.', 
      category: 'ელექტრონიკა', 
-     image: 'https://shorturl.at/pQbVJ' },
+     image: 'https://shorturl.at/pQbVJ',
+     sellerPhone: '123-456-7891'
+    },
     
 ];
 
