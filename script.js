@@ -1,10 +1,10 @@
 const products = [
     
-  //  { id: 1, name: 'მობილური ტელეფონი', 
-   //  price: 299.99, 
-   //  description: 'კარგი ხარისხის კამერით მაღალი ხარისხის მობილური ტელეფონი.', 
-   //  category: 'ელექტრონიკა', 
-   //  image: 'https://shorturl.at/pQbVJ' },
+    { id: 1, name: 'მობილური ტელეფონი', 
+     price: 299.99, 
+     description: 'კარგი ხარისხის კამერით მაღალი ხარისხის მობილური ტელეფონი.', 
+     category: 'ელექტრონიკა', 
+     image: 'https://shorturl.at/pQbVJ' },
     
 ];
 
