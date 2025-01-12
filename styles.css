@@ -16,6 +16,9 @@
     ;
     font-family: myffont;
 }
+html {
+  scroll-behavior: smooth;
+}
 @font-face{
   font-family: 'myffont';
   src: url( 'bpg_banner_supersquare_caps.ttf')
@@ -216,6 +219,88 @@ iframe{
 }
 .sif{
     margin-top:30px;
+}
+.product-button-cont{
+  width: 100%;
+  height: auto;
+}
+.product-button{
+  width: 100%;
+  height: 60px;
+  background-color: #F6363F61;
+  border: none;
+  font-size: 20px;
+}
+/* ძირითადი სტილები */
+.ad-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2B2A38; /* ფონური ფერი */
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+  border: 1px solid #F6363F;
+}
+
+.ad-image {
+  flex: 1;
+  width: 60%;
+  object-fit: cover;
+}
+
+.ad-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #2B2A38; /* შიდა კონტენტის ფონური ფერი */
+  color: #ffffff; /* ტექსტის ფერი */
+}
+
+.ad-content h2 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.ad-content p {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.ad-button {
+  display: inline-block;
+  background-color:  #1E1E2A; /* ღილაკის ფერი */
+  color: #2B2A38; /* ღილაკის ტექსტის ფერი */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  border: 1px solid ;
+}
+
+/* მედია მოთხოვნები რესპონსიულობისთვის */
+@media (max-width: 768px) {
+  .ad-container {
+    flex-direction: column;
+  }
+
+  .ad-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .ad-content h2 {
+    font-size: 1.5em;
+  }
+
+  .ad-content p {
+    font-size: 0.9em;
+  }
+
+  .ad-button {
+    padding: 8px 16px;
+  }
 }
 @media only screen and (max-width: 600px) {
   #sortOrder {
