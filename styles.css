@@ -19,9 +19,6 @@
 html {
   scroll-behavior: smooth;
 }
-.ifl{
-    display:none;
-}
 @font-face{
   font-family: 'myffont';
   src: url( 'bpg_banner_supersquare_caps.ttf')
