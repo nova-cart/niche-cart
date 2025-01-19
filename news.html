@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Line News</title>
+     <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/L6Hs0C8f/Picsart-25-01-12-17-54-48-653.jpg">
+    <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
+</head>
+<body>
+    <header>
+        <h1>Shop Line News</h1>
+    </header>
+
+    <section id="newsFeed"></section>
+
+    <script>
+        // fetch the JSON file
+        fetch('news.json')
+            .then(response => response.json())  // Convert the response to JSON
+            .then(newsData => {
+                const feed = document.getElementById('newsFeed');
+                
+                // loop through the news data in reverse order and add them to the feed
+                newsData.reverse().forEach(article => {
+                    const card = document.createElement('div');
+                    card.classList.add('news-card');
+                    card.innerHTML = `
+                        <h3>${article.title}</h3>
+                        <p>${article.content}</p>
+                    `;
+                    feed.append(card);  // append adds the latest article at the bottom
+                });
+            })
+            .catch(error => {
+                console.error('Error loading the JSON file:', error);
+            });
+    </script>
+</body>
+</html>
