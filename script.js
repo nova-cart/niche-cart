@@ -90,3 +90,71 @@ function sortProducts(order) {
 
 // თავდაპირველად ყველა პროდუქტის ნახვა
 renderProducts(products);
+// Progress Bar Script
+window.addEventListener("scroll", () => {
+  const progressBar = document.querySelector(".progress-bar");
+  const scrollTop = window.scrollY; // Current scroll position
+  const scrollHeight = document.body.scrollHeight - window.innerHeight; // Total scrollable height
+  const progress = (scrollTop / scrollHeight) * 100; // Calculate progress
+  progressBar.style.width = progress + "%";
+});
+
+
+// ფუნქცია, რომელიც მისალმებას ადგენს დროის მიხედვით
+const showGreeting = () => {
+  const greeting = document.createElement("div");
+  greeting.style.position = "fixed";
+  greeting.style.bottom = "20px";
+  greeting.style.left = "20px";
+  greeting.style.backgroundColor = "white";
+  greeting.style.color = "black";
+  greeting.style.padding = "10px 15px";
+  greeting.style.borderRadius = "5px";
+  greeting.style.boxShadow = "0 2px 10px white";
+  greeting.style.zIndex = "1000";
+
+  const now = new Date(); // მომხმარებლის ადგილობრივი დრო
+  const hours = now.getHours(); // საათები
+
+  let message = "";
+
+  if (hours >= 5 && hours < 12) {
+    message = "დილამშვიდობისა!";
+  } else if (hours >= 12 && hours < 18) {
+    message = "დღის მშვიდობისა!";
+  } else if (hours >= 18 && hours < 24) {
+    message = "საღამომშვიდობისა!";
+  } else {
+    message = "ღამემშვიდობისა!";
+  }
+
+  greeting.textContent = message;
+  document.body.appendChild(greeting);
+
+  // შეტყობინება 5 წამში ქრება
+  setTimeout(() => greeting.remove(), 5000);
+};
+
+// ფუნქციის გამოძახება
+showGreeting();
+
+        // fetch the JSON file
+        fetch('news.json')
+            .then(response => response.json())  // Convert the response to JSON
+            .then(newsData => {
+                const feed = document.getElementById('newsFeed');
+                
+                // loop through the news data in reverse order and add them to the feed
+                newsData.reverse().forEach(article => {
+                    const card = document.createElement('div');
+                    card.classList.add('news-card');
+                    card.innerHTML = `
+                        <h3>${article.title}</h3>
+                        <p>${article.content}</p>
+                    `;
+                    feed.append(card);  // append adds the latest article at the bottom
+                });
+            })
+            .catch(error => {
+                console.error('Error loading the JSON file:', error);
+            });
