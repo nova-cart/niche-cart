@@ -121,7 +121,7 @@ const showGreeting = () => {
   if (hours >= 5 && hours < 12) {
     message = "დილამშვიდობისა!";
   } else if (hours >= 12 && hours < 18) {
-    message = "დღის მშვიდობისა!";
+    message = "შუადღე მშვიდობისა!";
   } else if (hours >= 18 && hours < 24) {
     message = "საღამომშვიდობისა!";
   } else {
