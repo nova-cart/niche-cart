@@ -121,7 +121,7 @@ const showGreeting = () => {
   if (hours >= 5 && hours < 12) {
     message = "დილამშვიდობისა!";
   } else if (hours >= 12 && hours < 18) {
-    message = "შუადღე მშვიდობისა!";
+    message = "დღის მშვიდობისა!";
   } else if (hours >= 18 && hours < 24) {
     message = "საღამომშვიდობისა!";
   } else {
@@ -140,6 +140,29 @@ showGreeting();
 
         // fetch the JSON file
         fetch('news.json')
+            .then(response => response.json())  // Convert the response to JSON
+            .then(newsData => {
+                const feed = document.getElementById('newsFeed');
+                
+                // loop through the news data in reverse order and add them to the feed
+                newsData.reverse().forEach(article => {
+                    const card = document.createElement('div');
+                    card.classList.add('news-card');
+                    card.innerHTML = `
+                        <h3>${article.title}</h3>
+                        <p>${article.content}</p>
+                    `;
+                    feed.append(card);  // append adds the latest article at the bottom
+                });
+            })
+            .catch(error => {
+                console.error('Error loading the JSON file:', error);
+            });
+            function toggleMenu() {
+    const navbarLinks = document.querySelector('.navbar-links');
+    navbarLinks.classList.toggle('active');
+}
+fetch('news.json')
             .then(response => response.json())  // Convert the response to JSON
             .then(newsData => {
                 const feed = document.getElementById('newsFeed');
