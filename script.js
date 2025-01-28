@@ -36,7 +36,7 @@ function openModal(product) {
 
   if (product.sellerPhone) {
     document.getElementById('modalSellerPhone').innerHTML = `
-      <a href="tel:${product.sellerPhone}" style="color: #F6363F; text-decoration: none;">
+      <a href="tel:${product.sellerPhone}" style="color: #0DF4A8; text-decoration: none;">
         ${product.sellerPhone}
       </a>`;
   } else {
@@ -106,11 +106,11 @@ const showGreeting = () => {
   greeting.style.position = "fixed";
   greeting.style.bottom = "20px";
   greeting.style.left = "20px";
-  greeting.style.backgroundColor = "white";
+  greeting.style.backgroundColor = "#0DF4A8";
+  greeting.style.border = "2px solid black"
   greeting.style.color = "black";
   greeting.style.padding = "10px 15px";
   greeting.style.borderRadius = "5px";
-  greeting.style.boxShadow = "0 2px 10px white";
   greeting.style.zIndex = "1000";
 
   const now = new Date(); // მომხმარებლის ადგილობრივი დრო
@@ -178,6 +178,3 @@ fetch('news.json')
                     feed.append(card);  // append adds the latest article at the bottom
                 });
             })
-            .catch(error => {
-                console.error('Error loading the JSON file:', error);
-            });
