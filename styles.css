@@ -1,3 +1,10 @@
+:root {
+  --witeli: #0DF4A8;
+  --shavi: #0D0D11;
+  --tetri: #F6F6F6;
+}
+
+
 /* ძირითადი რეზეტის სტილი */
 * {
     margin: 0;
@@ -26,7 +33,7 @@ html {
 /* საერთო სტილი */
 body {
     font-family: myffont;
-    background-color: #1e1e2a;
+    background-color: black;
     color: #FFFFFF;
     line-height: 1.6;
     margin: 20px;
@@ -45,25 +52,25 @@ body {
   display: inline-block;
   outline: none;
   border: 2px solid #ffd819;
-  background: #2b2a38;
+  background: var(--tetri);
   border-radius: 5px;
   font-size: 15px;
   position: fixed;
   margin-top: 5px;
   margin-left: 5px;
-  border: #f6363f 3px initial;
+  border: var(--witeli) 3px initial;
 }
 a:link, a:visited {
   text-align: center;
   text-decoration: none;
-  color:  #f6363f;
+  color:  var(--witeli);
 }
 .css-button-sharp--yellow:hover {
   background: #fff;
   color: #ffd819
 }
 header {
-    background-color: #f6363f;
+    background-color: var(--witeli);
     padding: 10px 0;
     text-align: center;
     width:100%;
@@ -72,7 +79,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    color: #1e1e2a;
+    color: black;
 }
 
 #productsGrid {
@@ -83,12 +90,13 @@ header h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    color: var(--witeli);
 }
 
 .product-card {
-    background-color: #2b2a38;
+    background-color: var(--shavi);
     padding: 25px;
-    border: 2px solid #f6363f;
+    border: 2px solid var(--witeli);
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
@@ -103,7 +111,7 @@ header h1 {
     border-radius: 10px;
 }
 .product-price {
-    color: #f6363f;
+    color: var(--witeli);
     font-size: 15px;
     margin-top: 0px;
 }
@@ -117,8 +125,8 @@ h3{
     border-radius: 5px;
     margin-top: 10px;
     font-size: 1em;
-    background-color: #2b2a38;
-    color: #f6363f;
+    background-color: var(--shavi);
+    color: var(--witeli);
 }
 #categories {
     width: 20%;
@@ -127,8 +135,8 @@ h3{
     border-radius: 5px;
     margin-top: 10px;
     font-size: 1em;
-    background-color: #2b2a38;
-    color: #f6363f;
+    background-color: var(--shavi);
+    color: var(--witeli);
 }
 #sortOrder {
     width: 25%;
@@ -137,8 +145,8 @@ h3{
     border-radius: 5px;
     margin-top: 10px;
     font-size: 1em;
-    background-color: #2B2A38;
-    color: #f6363f;
+    background-color: var(--shavi);
+    color: var(--witeli);
 }
 
 #productModal {
@@ -148,23 +156,23 @@ h3{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0000002B;
+    background-color: #00000073;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 }
 
 .modal-content {
-    background-color: #1E1E2AC7;
+    background-color: var(--witeli)C7;
     backdrop-filter: blur(30px);
     padding: 20px;
     border-radius: 10px;
     text-align: left;
     width: 80%;
     max-width: 600px;
-    color: #FFF;
-    border: solid 2px  #f6363f;
+    color: #0DF4A8;
+    border: solid 2px  var(--witeli);
 }
 
 .modal-content h2 {
@@ -176,7 +184,7 @@ h3{
 }
 
 .modal-content button {
-    background-color: #f6363f;
+    background-color: var(--witeli);
     color: #000;
     border: none;
     padding: 10px;
@@ -186,7 +194,7 @@ h3{
 }
 
 .modal-content button:hover {
-    background-color: #f6363f;
+    background-color: var(--witeli);
 }
 nav{
   display: flex;
@@ -198,9 +206,9 @@ nav{
   padding: 10px;
   font-size: 15px;
   margin:10px;
-  background-color: #2B2A38;
+  background-color: var(--tetri);
   border: none;
-  color: #F6363F;
+  color: var(--witeli);
   border-radius: 2px;
 }
 .pm1{
@@ -208,17 +216,14 @@ nav{
     height:auto;
     font-size:15px;
     text-aling:center;
-    color: #1e1e2a;
+    color: black;
     padding:20px;
     margin-top:-10px;
 }
 iframe{
   height: 80%;
   border-radius:5px;
-  border: solid 2px  #f6363f;
-}
-.sif{
-    margin-top:30px;
+  border: solid 2px  var(--witeli);
 }
 .product-button-cont{
   width: 100%;
@@ -227,7 +232,7 @@ iframe{
 .product-button{
   width: 100%;
   height: 60px;
-  background-color: #F6363F61;
+  background-color: var(--shavi);
   border: none;
   font-size: 20px;
 }
@@ -235,11 +240,12 @@ iframe{
 .ad-container {
   display: flex;
   flex-wrap: wrap;
-  background-color: #2B2A38; /* ფონური ფერი */
+  background-color: var(--shavi); /* ფონური ფერი */
   border-radius: 10px;
   overflow: hidden;
   margin: 20px;
-  border: 1px solid #F6363F;
+  border: 1px solid var(--witeli);
+  color: var(--witeli);
 }
 
 .ad-image {
@@ -251,8 +257,8 @@ iframe{
 .ad-content {
   flex: 1;
   padding: 20px;
-  background-color: #2B2A38; /* შიდა კონტენტის ფონური ფერი */
-  color: #ffffff; /* ტექსტის ფერი */
+  background-color: var(--shavi); /* შიდა კონტენტის ფონური ფერი */
+  color: var(--witeli); /* ტექსტის ფერი */
 }
 
 .ad-content h2 {
@@ -267,8 +273,9 @@ iframe{
 
 .ad-button {
   display: inline-block;
-  background-color:  #1E1E2A; /* ღილაკის ფერი */
-  color: #2B2A38; /* ღილაკის ტექსტის ფერი */
+  background-color:  var(--shavi); /* ღილაკის ფერი */
+   /* ღილაკის ტექსტის ფერი */
+  
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -331,8 +338,8 @@ iframe{
 }
 /* General Footer Styling */
 .footer {
-  background-color: #F6363F;
-  color: #2B2A38;
+  background-color: var(--witeli);
+  color: var(--shavi);
   padding: 20px 0;
   font-size: 14px;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
@@ -359,25 +366,25 @@ iframe{
   margin: 0;
   font-size: 18px;
   font-weight: bold;
-  color: #2B2A38;
+  color: var(--shavi);
 }
 
 .footer .footer-logo p {
   margin: 5px 0 0;
   font-size: 14px;
-  color: #2B2A38;
+  color: var(--shavi);
 }
 
 .footer .footer-links h4,
 .footer .footer-social h4 {
   margin-bottom: 10px;
   font-size: 16px;
-  color: #2B2A38;
+  color: var(--shavi);
 }
 
 .footer .footer-links a,
 .footer .footer-social a {
-  color: #2B2A38;
+  color: var(--shavi);
   text-decoration: none;
   margin-right: 15px;
   font-size: 14px;
@@ -395,7 +402,7 @@ iframe{
 .footer .footer-bottom p {
   margin: 0;
   font-size: 12px;
-  color: #2B2A38;
+  color: var(--shavi);
 }
 
 /* Responsive Styles */
@@ -454,9 +461,9 @@ iframe{
         }
 
         .news-card {
-            background-color: #2b2a38;
+            background-color: var(--shavi);
             padding: 25px;
-            border: 2px solid #f6363f;
+            border: 2px solid var(--witeli);
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -469,7 +476,7 @@ iframe{
 
         .news-card h3 {
             font-size: 2rem;
-            color: #f6363f;
+            color: var(--witeli);
             font-weight: 700;
             margin-bottom: 15px;
             text-transform: capitalize;
@@ -520,7 +527,7 @@ iframe{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #1E1E2A;
+    background-color: black;
     padding: 20px 40px;
     position: sticky;
     top: 0;
@@ -530,7 +537,7 @@ iframe{
 }
 
 .navbar-logo a {
-    color: #F6363F;
+    color: var(--witeli);
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -552,7 +559,7 @@ iframe{
 }
 
 .navbar-links a {
-    color: #F6363F;
+    color: var(--witeli);
     font-size: 15px;
     font-weight: 500;
     padding: 10px 25px;
@@ -562,8 +569,8 @@ iframe{
 }
 
 .navbar-links a:hover {
-    background-color: #F6363F;
-    color: #1E1E2A;
+    background-color: var(--witeli);
+    color: black;
     transform: translateY(-2px);
 }
 
@@ -575,14 +582,14 @@ iframe{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #1E1E2A;
+    background-color: black;
     min-width: 180px;
     border-radius: 3px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
-    color: #F6363F;
+    color: var(--witeli);
     padding: 12px 20px;
     display: block;
     font-size: 16px;
@@ -591,8 +598,8 @@ iframe{
 }
 
 .dropdown-content a:hover {
-    background-color: #F6363F;
-    color: #1E1E2A;
+    background-color: var(--witeli);
+    color: black;
 }
 
 .dropdown:hover .dropdown-content {
@@ -603,7 +610,7 @@ iframe{
 .navbar-toggle {
     display: none;
     font-size: 30px;
-    color: #F6363F;
+    color: var(--witeli);
     cursor: pointer;
     border-radius: 3px;
     padding: 5px 10px;
@@ -626,12 +633,12 @@ iframe{
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color:#1E1E2A;
+        background-color:black;
         position: absolute;
         top: 70px;
         left: 0;
         padding: 20px;
-        border-top: 2px solid #F6363F;
+        border-top: 2px solid var(--witeli);
         font-size: 25px;
         border-radius: 3px;
         
@@ -649,4 +656,4 @@ iframe{
     .navbar-toggle {
         display: block;
     }
-                                        }
+}
